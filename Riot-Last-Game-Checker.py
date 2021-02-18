@@ -1,9 +1,14 @@
+# This script grabs your last played game with information of all players who played in it. Very simple to OP.GG. Uses RiotWatcher and pandas for the data structures 
+
 from riotwatcher import LolWatcher, ApiError
 import pandas as pd
 
+# Riot API key is needed to access their API. Easily attainable with a Riot account. 
 api_key = "Enter API Key Here"
 watcher = LolWatcher(api_key)
 region = "na1"
+
+# Enter your summoner name here and it will grab its last played Summoners Rift game
 player = "Enter Summoner Name Here"
 
 info = watcher.summoner.by_name(region, player)
